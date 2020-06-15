@@ -7,17 +7,17 @@ _This site was used to practive object oriented programming concepts by building
 
 ## Specifications
 
-**Behavior** ---- .
-* Input: ---
-* Output: ---
+**Behavior** add task .
+* Input: add task
+* Output: list task
 
 **Behavior**
-* Input: 
-* Output:
+* Input: mark task as done
+* Output: task has line through it
 
 **Behavior**
-* Input: 
-* Output:
+* Input: remove task
+* Output: task is removed
 
 **Behavior**
 * Input: 

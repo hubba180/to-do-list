@@ -38,11 +38,11 @@ function Item(itemName, description) {
 
 Item.prototype.itemDescription = function () {
   return this.itemName + " " + this.description;
- }
+}
 
- Item.prototype.complete = function(item) {
+Item.prototype.complete = function(item) {
   item.complete = true;
- }
+}
 
 //  User Interface Logic 
 
@@ -51,8 +51,8 @@ let todoList = new ToDoList();
 function displayItemDetails(itemsToDisplay) {
   let itemList = $("ul#items");
   let htmlListInfo = "";
-  itemsToDisplay.items.forEach(function(item) {
-    htmlListInfo += "<li id=" + item.id + ">" + item.itemDescription() + "</li><button type=\"submit\" id=\"btn" + item.d + "\">Complete</button><button type=\"submit\">Remove</button>";
+  itemsToDisplay.items.forEach(function(index, item) {
+    htmlListInfo += "<li id=" + item.id + ">" + item.itemDescription() + "</li><button type=\"submit\" id=\"btn" + item.id + "\" class=\"complete\">Complete</button><button type=\"submit\">Remove</button>";
   });
   itemList.html(htmlListInfo);
 };
@@ -65,14 +65,14 @@ $(document).ready(function() {
     let inputDescription = $("input#new-description").val();
 
     let newItem = new Item(inputItem, inputDescription);
+    let removeItem = new Item(" ");
 
     todoList.addItem(newItem);
+    // todoList.deleteItem(removeItem);
     console.log(todoList.items);
-    displayItemDetails(todoList);
+    // displayItemDetails(todoList);
   });
 
-  $("#complete").click(function() {
-
-  })
+  $("#items").on
 });
 
